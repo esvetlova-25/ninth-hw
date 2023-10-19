@@ -26,14 +26,20 @@ public class Radio {
     }
 
     public void setIncreaseVolume() {
-        if (currentVolume < 101) {
+        if (currentVolume < 100) {
             currentVolume = currentVolume + 1;
+        } else {
+            currentVolume = 0;
+
         }
     }
 
     public void setDecreaseVolume() {
         if (currentVolume > 0) {
             currentVolume = currentVolume - 1;
+        } else {
+            currentVolume = 0;
+
         }
     }
 
@@ -64,24 +70,25 @@ public class Radio {
     public void setWaveNextMax() {
 
         if (currentWave < 9) {
-            currentVolume = currentVolume + 1;
+            currentWave = currentWave + 1;
         } else {
             currentWave = 0;
         }
     }
 
     public void setWavePrevMin() {
-        if (currentVolume > 0) {
-            currentVolume = currentVolume - 1;
+        if (currentWave > 0) {
+            currentWave = currentWave - 1;
         } else {
             currentWave = 9;
         }
     }
 
     public void setIncreaseWave() {
-        if (currentWave < 10) {
+        if (currentWave < 9) {
             currentWave = currentWave + 1;
         }
+
     }
 
     public void setDecreaseWave() {
