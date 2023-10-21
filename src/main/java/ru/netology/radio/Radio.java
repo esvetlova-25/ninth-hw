@@ -1,7 +1,7 @@
 package ru.netology.radio;
 
 public class Radio {
-    public int currentVolume;
+    private int currentVolume;
 
     public int getCurrentVolume() {
         return currentVolume;
@@ -14,7 +14,7 @@ public class Radio {
         if (newCurrentVolume > 100) {
             return;
         }
-        currentVolume = newCurrentVolume;
+        this.currentVolume = newCurrentVolume;
     }
 
     public void setToMaxVolume() {
@@ -24,6 +24,7 @@ public class Radio {
     public void setToMinVolume() {
         currentVolume = 0;
     }
+
 
     public void setIncreaseVolume() {
         if (currentVolume < 100) {
@@ -43,7 +44,7 @@ public class Radio {
         }
     }
 
-    public int currentWave;
+    private int currentWave;
 
     public int getCurrentWave() {
         return currentWave;
@@ -56,7 +57,7 @@ public class Radio {
         if (newCurrentWave < 0) {
             return;
         }
-        currentWave = newCurrentWave;
+        this.currentWave = newCurrentWave;
     }
 
     public void setToMaxWave() {
