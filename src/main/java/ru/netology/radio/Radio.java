@@ -50,22 +50,18 @@ public class Radio {
     private int maxWave = 9;
     private int minWave = 0;
     private int currentWave;
-    private int quantityStations = 10;
+    private int quantityWave;
 
     public Radio() {
+        this.maxWave = 9;
     }
 
-    public Radio(int size) {
-        this.quantityStations = minWave + size;
+    public Radio(int quantityWave) {
+        this.maxWave = quantityWave - 1;
     }
-
 
     public int getCurrentWave() {
         return currentWave;
-    }
-
-    public int getQuantityStations() {
-        return quantityStations;
     }
 
     public void setCurrentWave(int newCurrentWave) {
